@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floating Text Effect</title>
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .floating-text {
+      font-size: 48px;
+      font-weight: bold;
+      color: #fff;
+      text-transform: uppercase;
+      position: relative;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    /* Keyframes for floating effect */
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    /* Additional styles for a wave-like effect */
+    .floating-text span {
+      display: inline-block;
+      animation: wave 2s ease-in-out infinite;
+    }
+
+    .floating-text span:nth-child(1) { animation-delay: 0s; }
+    .floating-text span:nth-child(2) { animation-delay: 0.1s; }
+    .floating-text span:nth-child(3) { animation-delay: 0.2s; }
+    .floating-text span:nth-child(4) { animation-delay: 0.3s; }
+    .floating-text span:nth-child(5) { animation-delay: 0.4s; }
+    .floating-text span:nth-child(6) { animation-delay: 0.5s; }
+    .floating-text span:nth-child(7) { animation-delay: 0.6s; }
+
+    @keyframes wave {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="floating-text">
+    <span>F</span>
+    <span>L</span>
+    <span>O</span>
+    <span>A</span>
+    <span>T</span>
+    <span>I</span>
+    <span>N</span>
+    <span>G</span>
+  </div>
+</body>
+</html>
